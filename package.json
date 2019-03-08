@@ -1,0 +1,30 @@
+{
+  "name": "juber-server",
+  "version": "1.0.0",
+  "main": "index.ts",
+  "repository": "https://github.com/Joe1220/juber-server.git",
+  "author": "joe1220 <joe1220@daum.net>",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/cors": "^2.8.4",
+    "@types/helmet": "^0.0.43",
+    "@types/morgan": "^1.7.35",
+    "@types/node": "^11.10.5",
+    "nodemon": "^1.18.10",
+    "ts-node": "^8.0.3",
+    "tslint-config-prettier": "^1.18.0",
+    "typescript": "^3.3.3333"
+  },
+  "scripts": {
+    "dev": "cd src && nodemon --exec ts-node index.ts -e ts,graphql"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.16.4",
+    "graphql-tools": "^4.0.4",
+    "graphql-yoga": "^1.17.4",
+    "helmet": "^3.15.1",
+    "merge-graphql-schemas": "^1.5.8",
+    "morgan": "^1.9.1"
+  }
+}
