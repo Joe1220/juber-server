@@ -64,6 +64,7 @@ class User extends BaseEntity {
   lastOrientation: number;
 
   @CreateDateColumn() createdAt: string;
+
   @UpdateDateColumn() updatedAt: string;
 
   get fullName(): string {
@@ -71,7 +72,7 @@ class User extends BaseEntity {
   }
 
   public comparePassword(password: string): Promise<boolean> {
-    return bcrypt.compare(password, this.password)
+    return bcrypt.compare(password, this.password);
   }
 
   @BeforeInsert()
