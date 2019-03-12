@@ -6,6 +6,7 @@
   "author": "joe1220 <joe1220@daum.net>",
   "license": "MIT",
   "devDependencies": {
+    "@types/bcrypt": "^3.0.0",
     "@types/cors": "^2.8.4",
     "@types/helmet": "^0.0.43",
     "@types/morgan": "^1.7.35",
@@ -24,6 +25,7 @@
   },
   "dependencies": {
     "babel-runtime": "^6.26.0",
+    "bcrypt": "^3.0.4",
     "class-validator": "^0.9.1",
     "cors": "^2.8.5",
     "dotenv": "^6.2.0",

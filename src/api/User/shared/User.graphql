@@ -9,8 +9,6 @@ type User {
   phoneNumber: String
   verifiedPhonenNumber: Boolean!
   profilePhoto: String
-  createdAt: String!
-  updatedAt: String
   fullName: String
   isDriving: Boolean!
   isRiding: Boolean!
@@ -20,4 +18,8 @@ type User {
   lastOrientation: Float
   createdAt: String!
   updatedAt: String
+}
+
+type Query {
+  user: User
 }
