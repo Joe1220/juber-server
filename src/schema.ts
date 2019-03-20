@@ -4,12 +4,12 @@ import path from "path";
 
 const allTypes: any[] = fileLoader(
   path.join(__dirname, "./api/**/*.graphql")
-)
+);
 
 const allResolvers: any[] = fileLoader(
   path.join(__dirname, "./api/**/*.resolvers.*")
-)
-  
+);
+
 const mergedTypes = mergeTypes(allTypes);
 const mergedResolvers = mergeResolvers(allResolvers);
 
@@ -19,4 +19,3 @@ const schema = makeExecutableSchema({
 });
 
 export default schema;
-  
