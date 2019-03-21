@@ -15,7 +15,7 @@ const resolvers: Resolvers = {
       ): Promise<EditPlaceResponse> => {
         const user: User = req.user;
         try {
-          const place = await Place.findOne({ id: args.placeId });
+          const place = await Place.findOne({ id: args.placeId }, { relations: ["user"]});
           if (place) {
             if (place.userId === user.id) {
               const notNull = cleanNullArgs(args);
