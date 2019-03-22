@@ -16,7 +16,6 @@ class App {
       schema,
       context: req => {
         const { connection: { context = null } = {} } = req;
-        console.log('check content: ', context)
         return {
           req: req.request,
           pubSub: this.pubSub,

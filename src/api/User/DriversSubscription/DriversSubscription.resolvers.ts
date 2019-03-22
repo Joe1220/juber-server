@@ -7,6 +7,8 @@ const resolvers = {
       subscribe: withFilter(
         (_, __, { pubSub }) => pubSub.asyncIterator("driverUpdate"),
         (payload, _, { context }) => {
+          console.log('payload - This is coming from the ReportMovement Resolve', payload)
+          console.log('context - app.ts context', context)
           const user: User = context.currentUser;
           const {
             DriversSubscription: {
